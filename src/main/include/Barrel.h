@@ -13,10 +13,10 @@ class Barrel{
     States current_state;
 
     Barrel();
-        void Init();
-        void Down();
-        void Up(); 
-        void Stop();
-        void Slow();
+        void StateMachine::Init();
+        void StateMachine::Down();
+        void StateMachine::Up(); 
+        void StateMachine::Stop();
+        void StateMachine::Slow();
 
 }

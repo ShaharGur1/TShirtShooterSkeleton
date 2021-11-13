@@ -32,19 +32,19 @@ void Barrel::StateMachine(){
         Init();
     break;
 
-    case states::Down:
+    case states::DOWN:
         Down();
     break;
 
-    case states::Up:
+    case states::UP:
         Up();
     break;
 
-    case states::Stop:
+    case states::STOP:
         Stop();
     break;
 
-    case states::Slow:
+    case states::SLOW:
         Slow();
     break;
     }
