@@ -2,27 +2,27 @@
 #include <frc/smartdashboard/SmartDashboard.h>
 
 Barrel::Barrel(){
-    motor = new WPI_TalonSRX(0);
+    elevation_talon = new WPI_TalonSRX(0);
 }
 
 void Barrel::Init(){
-    elevation_talon->set(0.0);
+    elevation_talon->Set(0.0);
 }
 
 void Barrel::Down(){
-    elevation_talon->set(-0.4);
+    elevation_talon->Set(-0.4);
 }
 
 void Barrel::Up(){
-    elevation_talon->set(0.4);
+    elevation_talon->Set(0.4);
 }
 
 void Barrel::Stop(){
-    elevation_talon->set(0.1);
+    elevation_talon->Set(0.1);
 }
 
 void Barrel::Slow(){
-    elevation_talon->set(0.2);
+    elevation_talon->Set(0.2);
 }
 
 void Barrel::StateMachine(){
@@ -40,11 +40,11 @@ void Barrel::StateMachine(){
         Up();
     break;
 
-    case states::Stop():
+    case states::Stop:
         Stop();
     break;
 
-    case states::Slow():
+    case states::Slow:
         Slow();
     break;
     }
