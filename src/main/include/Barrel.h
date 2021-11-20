@@ -18,5 +18,6 @@ class Barrel{
         void Up(); 
         void Stop();
         void Slow();
+        void StateMachine();
 
-}
+};
