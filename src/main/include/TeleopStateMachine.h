@@ -2,6 +2,7 @@
 
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <frc/Joystick.h>
+#include "Barrel.h"
 
 class TeleopStateMachine
 {
@@ -18,6 +19,7 @@ public:
     States current_state;
 
     frc::Joystick *joystick;
+    Barrel *barrel;
 
     int start_compressor_button = 5;
     int stop_compressor_button = 6;
@@ -35,7 +37,7 @@ public:
     bool down;
     bool emergency;
 
-    TeleopStateMachine(frc::Joystick *joystick_);
+    TeleopStateMachine(frc::Joystick *joystick_,Barrel *barrel);
     void UpdateButtons();
     void StateMachine();
 };

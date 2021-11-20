@@ -3,9 +3,7 @@
 // the WPILib BSD license file in the root directory of this project.
 
 #include "Robot.h"
-
 #include <iostream>
-
 #include <frc/smartdashboard/SmartDashboard.h>
 
 void Robot::RobotInit() {
@@ -15,7 +13,9 @@ void Robot::RobotInit() {
 
   controller = new frc::Joystick(0);
   drive = new DriveController();
+  barrel = new Barrel();
   tsm = new TeleopStateMachine(controller); 
+ 
 }
 
 /**

@@ -12,6 +12,7 @@
 
 #include "TeleopStateMachine.h"
 #include "DriveController.h"
+#include "Barrel.h"
 
 class Robot : public frc::TimedRobot {
  public:
@@ -30,6 +31,7 @@ class Robot : public frc::TimedRobot {
   frc::Joystick *controller;
   DriveController *drive;
   TeleopStateMachine *tsm;
+  Barrel *barrel;
 
  private:
   frc::SendableChooser<std::string> m_chooser;

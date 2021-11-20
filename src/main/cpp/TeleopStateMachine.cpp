@@ -1,11 +1,13 @@
 #include "TeleopStateMachine.h"
 
-TeleopStateMachine::TeleopStateMachine(frc::Joystick *joystick_)
+TeleopStateMachine::TeleopStateMachine(frc::Joystick *joystick_,Barrel *barrel_)
 {
     joystick = joystick_;
     
+    barrel = barrel_;
     current_state = States::STOP;
 }
+
 
 void TeleopStateMachine::UpdateButtons(){
 
@@ -47,21 +49,25 @@ void TeleopStateMachine::StateMachine(){
     switch (current_state)
     {
     case States::INIT:
+        barrel->current_state = Barrel::States::INIT;
         break;
     
     case States::RUN:
         break;
 
     case States::STOP:
+        barrel->current_state = Barrel::States::STOP;
         break;
 
     case States::SHOOT:
         break;
 
     case States::UP:
+        barrel->current_state = Barrel::States::UP;
         break;
 
     case States::DOWN:
+        barrel->current_state = Barrel::States::DOWN;
         break;
 
     case States::STOP_BARREL:
@@ -74,5 +80,5 @@ void TeleopStateMachine::StateMachine(){
         break;
         
     }
-
+    barrel->state_machine
 }
