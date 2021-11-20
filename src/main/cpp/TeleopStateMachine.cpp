@@ -80,5 +80,5 @@ void TeleopStateMachine::StateMachine(){
         break;
         
     }
-    barrel->state_machine
+    barrel->StateMachine
 }
