@@ -28,23 +28,23 @@ void Barrel::Slow(){
 void Barrel::StateMachine(){
     switch (current_state)
     {
-    case states::INIT:
+    case States::INIT:
         Init();
     break;
 
-    case states::DOWN:
+    case States::DOWN:
         Down();
     break;
 
-    case states::UP:
+    case States::UP:
         Up();
     break;
 
-    case states::STOP:
+    case States::STOP:
         Stop();
     break;
 
-    case states::SLOW:
+    case States::SLOW:
         Slow();
     break;
     }
