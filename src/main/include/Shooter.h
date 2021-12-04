@@ -3,6 +3,8 @@
 #include <frc/WPILib.h>
 #include <frc/smartdashboard/SmartDashboard.h>
 #include <chrono>
+#include <frc/Solenoid.h> // Solenoids
+
 
 class Shooter
 {
