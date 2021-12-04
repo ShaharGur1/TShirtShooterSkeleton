@@ -6,7 +6,7 @@ Shooter::Shooter()
     compressor1 = new WPI_TalonSRX(1);
     compressor2 = new WPI_TalonSRX(11);
 
-    firing_valve = frc::Solenoid(0,2);
+    firing_valve = new frc::Solenoid(0,2);
 }
 
 void Shooter::Init()
