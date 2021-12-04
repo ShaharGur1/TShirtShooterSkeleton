@@ -7,17 +7,11 @@
 class Shooter
 {
 private:
-     WPI_TalonSRX *m_compressor1;
-    WPI_TalonSRX *m_compressor2;
-    frc::Solenoid *m_firing_valve;
-    frc::Solenoid *m_emergency_valve;
+     WPI_TalonSRX *compressor1;
+     WPI_TalonSRX *compressor2;
 
+     frc::Solenoid *firing_valve;
 
-    std::chrono::duration<double> counter;
-    
-    std::chrono::time_point<std::chrono::steady_clock> start;
-
-    std::chrono::time_point<std::chrono::steady_clock> end;
 
 public:
 
@@ -35,6 +29,6 @@ public:
     void Go();
     void Shoot();
     void ResetCounter();
-    void StateMAchine();
+    void StateMachine();
 
 }
