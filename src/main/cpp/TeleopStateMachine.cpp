@@ -81,4 +81,5 @@ void TeleopStateMachine::StateMachine(){
         
     }
     barrel->StateMachine();
+    shooter->StateMachine();
 }
