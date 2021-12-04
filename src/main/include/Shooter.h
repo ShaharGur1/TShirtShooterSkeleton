@@ -31,4 +31,4 @@ public:
     void ResetCounter();
     void StateMachine();
 
-}
+};
